@@ -3,7 +3,7 @@ pragma solidity >0.4.0 <0.8.0;
 pragma experimental ABIEncoderV2;
 /**
  * @title Block Sat Oracle Event Listener. 
- * @author Taurai Ushewokunze 
+ * @author Taurai Ushewokunze
  * @dev Block Sat Oracle Event Listener interface. This interface is used to listen for Natural Events and request prices real time from Block Sat. 
  * NOTE: Implementers should secure their operation implementations against the Block Sat Oracle address issued by the gateway to prevent rogue actors manipulating their services
  * The Block Sat Oracle team accept no liability for any hacks of implmenter implementations 

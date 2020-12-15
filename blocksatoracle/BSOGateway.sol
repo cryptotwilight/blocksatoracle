@@ -4,7 +4,9 @@ pragma experimental ABIEncoderV2;
 
 import "../rolemanager/Administered.sol";
 import "./IBSOGateway.sol";
-
+/**
+ * @author Taurai Ushewokunze
+ */
 contract BSOGateway is Administered, IBSOGateway { 
     
     

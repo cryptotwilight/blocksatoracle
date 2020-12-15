@@ -5,7 +5,9 @@ pragma experimental ABIEncoderV2;
 import "./ITellorManager.sol";
 import "../rolemanager/Administered.sol";
 import "https://github.com/tellor-io/usingtellor/blob/master/contracts/UsingTellor.sol";
-
+/**
+ * @author Taurai Ushewokunze
+ */
 contract TellorManager is Administered, UsingTellor, ITellorManager {
     
     uint256 priceRequestCount; 

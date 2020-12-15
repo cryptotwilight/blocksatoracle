@@ -5,6 +5,10 @@ pragma experimental ABIEncoderV2;
 import "../rolemanager/Administered.sol";
 import "./IBank.sol";
 
+/**
+ * @author Taurai Ushewokunze 
+ */
+
 
 contract Bank is Administered, IBank  { 
     

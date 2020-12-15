@@ -3,7 +3,7 @@ pragma solidity >0.4.0 <0.8.0;
 pragma experimental ABIEncoderV2;
 /**
  * @title Block Sat Oracle of chain integration interface
- * @author Taurai Ushewokunze
+ * @author Taurai Ushewokunze 
  * @dev this provides the interface into which off chain satellite data should be posted into the Block Sat Oracle. 
  * The order of execution is that a node must first 'postEvent' with all the data, then acquire the 'listeners'  via 'getListenersToNotifyForCategory'
  * then notify each listener in a separate execution thread via 'notifyListener'. 
