@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: UNLICENSED
 pragma solidity >0.4.0 <0.8.0; 
 pragma experimental ABIEncoderV2;
 
@@ -6,7 +7,9 @@ import "../bank/IBank.sol";
 import "./Administered.sol";
 import "./RoleManager.sol";
 import "./IRoleManagerGateway.sol";
-
+/**
+ * @author Taurai Ushewokunze 
+ */
 contract RoleManagerGateway is Administered, IRoleManagerGateway {
         
     
@@ -41,7 +44,7 @@ contract RoleManagerGateway is Administered, IRoleManagerGateway {
         return l_rmAddress;
     }
     
-    function getRoleManagerAddress(address _roleManagerAdministrator) external view returns (address _roleManagerAddress) {
+    function getRoleManagerAddress(address _roleManagerAdministrator) override external view returns (address _roleManagerAddress) {
         return roleManagerAddressByRoleManagerAdministratorAddress[_roleManagerAdministrator];
     }
     

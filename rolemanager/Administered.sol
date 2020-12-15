@@ -1,7 +1,11 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity >=0.4.0 <0.8.0; 
 pragma experimental ABIEncoderV2;
-
+/**
+ * @title Administered 
+ * @author Taurai Ushewokunze 
+ * @dev This contract provides the basis of administration through out Block Sat 
+ */ 
 abstract contract  Administered { 
     
     address administrator; 

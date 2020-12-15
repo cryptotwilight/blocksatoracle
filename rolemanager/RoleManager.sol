@@ -1,9 +1,14 @@
+// SPDX-License-Identifier: UNLICENSED
 pragma solidity >0.4.0 <0.8.0; 
 pragma experimental ABIEncoderV2;
 
 
 import "./Administered.sol";
 import "./IRoleManager.sol";
+
+/**
+ * @author Taurai Ushewokunze 
+ */
 
 contract RoleManager is Administered, IRoleManager { 
     
@@ -32,12 +37,12 @@ contract RoleManager is Administered, IRoleManager {
         return true;
     }
     
-    function roleOnly(string memory _role) override external view returns (string memory _message) {
+    function roleOnly(string memory _role, address _caller) override external view returns (string memory _message) {
         require(isRoleFound(_role), '00 - unknown role'); // check that the role is a known role
         address[] memory allowedAddresses = allowedAddressesByRole[_role];
         bool found = false; 
         for(uint x = 0 ; x < allowedAddresses.length; x++) {
-            if(allowedAddresses[x] == msg.sender) {
+            if(allowedAddresses[x] == _caller) {
                 found = true; 
             }
         }
@@ -109,7 +114,4 @@ contract RoleManager is Administered, IRoleManager {
     function isEqual(string memory a, string memory b ) internal pure returns (bool _isEqual) {
        return (keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b))));
     }   
-
-
-
 }
